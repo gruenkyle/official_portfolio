@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BurgerMenu</title>
+</head>
+
+<body>
+
+    <header id="phoneMenu">
+        <div class="exitMenu">
+            <h1 onclick="burgerReset()">X</h1>
+        </div>
+        <div class="menuOptions">
+            <ul>
+                <li><a>Home</a></li>
+                <li><a>Photography</a></li>
+                <li><a>Programming</a></li>
+                <li><a>About Me</a></li>
+            </ul> 
+        </div>
+    </header>
+    <header id="phoneNavBar">
+        <div class="checkbox" onclick="burgerMenu()">
+            <div class="hamburgerlines">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <button class="logo">Kyle Gruen</button>
+    </header>
+
+</body>
+
+<script>
+    function burgerMenu(){
+        var options = document.getElementById('phoneMenu');
+        var screenWipe = document.getElementsByTagName('header');
+        var footerWipe = document.getElementById('footer');
+
+        for (var i=0; i<screenWipe.length; i++){
+            screenWipe[i].style.display = "none";
+        }
+        options.style.display = "contents";
+    }
+
+    function burgerReset(){
+        var options = document.getElementById("menu");
+        var screenWipe = document.getElementsByTagName("header");
+        var footerWipe = document.getElementById("footer");
+        for (var i=0; i<screenWipe.length; i++){
+            screenWipe[i].style.display = "";
+        }
+        footerWipe.style.display = "";
+        options.style.display = "none";
+
+    }
+
+    function menuClick(location){
+        burgerReset();
+        locationScroll(location);
+    }
+
+</script>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+
+    *{
+        box-sizing: border-box;
+        margin: 0; 
+        padding: 0; 
+        border: 0px solid #ff0000; 
+    }
+
+    body{
+        margin: 0;
+        font-family: "Noto Sans Thai", sans-serif;
+        font-weight: 300;
+        font-size: 1rem; 
+        color: black; 
+        min-height: 100%;
+        background-color: #5e9c7d;
+    }
+
+    #phoneNavBar{
+        width: 100%;
+        height: 3.5rem;
+
+        justify-content: left;
+        display: flex; 
+        overflow: hidden;
+        background-color: #344E41;
+
+        align-items: center;
+        padding: .5rem 10%; 
+
+        top: 0; 
+        width: 100%;
+        transition: 0.4s;
+    }
+
+    #phoneNavBar .logo{
+        margin-left: auto;
+    }
+
+    .hamburgerlines div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-style: bold;
+    flex-direction: column;
+
+    width: 40px; 
+    height: 7px; 
+    background-color: whitesmoke;
+    margin: 5px 0;
+    transition: 0.4s;
+    }
+
+    #phoneMenu{
+    margin: 0; 
+    padding: 0;
+    position: fixed;
+    top: 0;
+    
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s;
+
+    display: none;
+    }
+
+    #phoneMenu ul {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; 
+        list-style: none;
+
+        display:flex;
+        flex-direction: column;
+    }
+
+    #phoneMenu ul li a{
+        padding: 10px;
+        display: inline-block;
+        font-family: verdana;
+        font-size: 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #262626;
+
+        margin-bottom: 2rem;
+    }
+
+    #phoneMenu ul li a:hover{
+        background: #FFFC85
+    }
+
+    #phoneMenu.active{
+        left: 0;
+        overflow: auto;
+    }
+
+    .exitMenu h1{
+    color: whitesmoke;
+    padding-left: 5%;
+    font-size: 4rem;
+    font-style: bold;
+    }
+
+    .exitMenu h1:hover{
+    cursor: pointer;
+    }
+
+</style>
