@@ -6,6 +6,82 @@
     <title>NavBar</title>
 </head>
 <body>
-    
+    <div id="navbarbox">
+        <button class="tablink Home open" onclick="scrollPg('Home')">Home</button>
+        <button class="tablink Programming" onclick="scrollPg('Programming')">Programming</button>
+        <button class="tablink Photography" onclick="scrollPg('Photography')">Photography</button>
+        <button class="tablink AboutMe" onclick="scrollPg('AboutMe')">About Me</button>
+        <button class="logo" onclick="scrollPg('Home')">Kyle Gruen</button>
+    </div>
 </body>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+
+    *{
+        box-sizing: border-box;
+        margin: 0; 
+        padding: 0; 
+        border: 0px solid #ff0000; 
+    }
+
+    body{
+        margin: 0;
+        font-family: "Noto Sans Thai", sans-serif;
+        font-weight: 300;
+        font-size: 1rem; 
+        color: whitesmoke; 
+        min-height: 100%;
+    }
+
+    #navbarbox{
+        width: 100%;
+        height: 3.5rem;
+
+        justify-content: left;
+        display: flex; 
+        overflow: hidden;
+        background-color: #344E41;
+    }
+
+    #navbarbox .logo{
+        margin-left: auto;
+    }
+
+    button {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        background-color: #344E41;
+        color: whitesmoke;
+    }
+
+    .open{
+        background-color: #588157;
+    }
+
+    button:hover{
+        background-color: #A3B18A;
+    }
+
+    .logo:hover{
+        background-color: #344E41;
+    }
+
+
+</style>
+
+<script>
+    function scrollPg(location){
+        var tabs = document.getElementsByClassName('tablink');
+        var curr = document.getElementsByClassName(location);
+        var i;
+        for (i = 0; i < tabs.length; i++){
+            tabs[i].classList.remove("open");
+        }
+        curr[0].classList.add("open");
+    }
+</script>
+
 </html>
