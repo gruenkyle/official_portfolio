@@ -1,0 +1,57 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    border: 0px solid #ff0000; 
+}
+
+body{
+    margin: 0;
+    font-family: "Noto Sans Thai", sans-serif;
+    font-weight: 300;
+    font-size: 1rem; 
+    color: whitesmoke; 
+    min-height: 100%;
+}
+
+/* NavBar Menu Container */
+
+#navbarbox{
+    width: 100%;
+    height: 3.5rem;
+
+    justify-content: left;
+    display: flex; 
+    overflow: hidden;
+    background-color: #344E41;
+}
+
+#navbarbox .logo{
+    margin-left: auto;
+}
+
+button {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+    background-color: #344E41;
+    color: whitesmoke;
+}
+
+.open{
+    background-color: #588157;
+}
+
+button:hover{
+    background-color: #A3B18A;
+}
+
+.logo:hover{
+    background-color: #344E41;
+}
+
+/* Hamburger Optional Container W/ Switch */
+

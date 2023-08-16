@@ -13,11 +13,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyle Gruen Portfolio</title>
+    <link rel="stylesheet" href="stylesheet_portfolio.css">
 
 </head>
 <body>
-    
-    
+
+    <div id="navbarbox">
+        <button class="tablink Home open" onclick="scrollPg('Home')">Home</button>
+        <button class="tablink Programming" onclick="scrollPg('Programming')">Programming</button>
+        <button class="tablink Photography" onclick="scrollPg('Photography')">Photography</button>
+        <button class="tablink AboutMe" onclick="scrollPg('AboutMe')">About Me</button>
+        <button class="logo" onclick="scrollPg('Home')">Kyle Gruen</button>
+    </div>
+
 </body>
+
+<script>
+
+    function scrollPg(location){
+        var tabs = document.getElementsByClassName('tablink');
+        var curr = document.getElementsByClassName(location);
+        var i;
+        for (i = 0; i < tabs.length; i++){
+            tabs[i].classList.remove("open");
+        }
+        curr[0].classList.add("open");
+        }
+        
+</script>
 
 </html>
