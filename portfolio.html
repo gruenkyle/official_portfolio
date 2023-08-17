@@ -41,7 +41,7 @@
             </div>
         </div>
         <div id="navbarbox">
-            <button class="tablink Home open" onclick="scrollPg('Home')">Home</button>
+            <button class="tablink Home open" onclick="scrollPg('Home', 'landingContainer')">Home</button>
             <button class="tablink Programming" onclick="scrollPg('Programming')">Programming</button>
             <button class="tablink Photography" onclick="scrollPg('Photography')">Photography</button>
             <button class="tablink AboutMe" onclick="scrollPg('AboutMe')">About Me</button>
@@ -49,11 +49,50 @@
         <button class="tablink Home logo" onclick="scrollPg('Home')">Kyle Gruen</button>
     </header>
 
+    <div id="landingContainer" class="container">
+        <div class="landingLeft">
+            <div class="profilePhoto">
+                <img src="./img/portfolioLogo.png" alt="ProfileIMG">
+            </div>
+            <div class="socialLogos">
+                <a href="https://github.com/gruenkyle">
+                    <img src="./img/icons8-github.svg" alt="githubIcon"
+                    style="width: 70px; height:70px;">
+                </a>
+                <a href="https://www.linkedin.com/in/kylegruen/">
+                    <img src="./img/icons8-linkedin.svg" alt="linkedInIcon"
+                    style="width: 70px; height:70px;">
+                </a>
+                <a href="https://www.instagram.com/kale__photography">
+                    <img src="./img/icons8-instagram.svg" alt="instagramIcon"
+                    style="width: 70px; height:70px;">
+                </a>
+            </div>
+        </div>
+        <div class="landingRight">
+            <div class="introText">
+                <h1>Capturing Special Moments and 
+                    Programming Complex Solutions Everyday
+                </h1>
+            </div>
+            <div class="descText">
+                <h3>My name is Kyle Gruen and I am an aspiring 
+                    software engineer and freelance photographer.
+                    This is my portfolio where art and technology combine
+                    to create innovative works!
+                </h3>
+            </div>
+            <div class="nextPage">
+                <h2 onclick="scrollPg('Home')">Explore More Below &nbsp; &#8711;</h2>
+            </div>  
+        </div>
+    </div>
+
 </body>
 
 <script>
 
-    function scrollPg(location){
+    function scrollPg(location, idLoc){
         var tabs = document.getElementsByClassName('tablink');
         var curr = document.getElementsByClassName(location);
         var i;
@@ -62,17 +101,22 @@
         }
         curr[0].classList.add("open");
 
-        var elem = document.getElementById(location);
+        var elem = document.getElementById(idLoc);
         elem.scrollIntoView();
     }
 
     function burgerMenu(){
         var options = document.getElementById('phoneMenu');
         var screenWipe = document.getElementsByTagName('header');
+        var containerWipe = document.getElementsByClassName('container');
         var footerWipe = document.getElementById('footer');
 
         for (var i=0; i<screenWipe.length; i++){
             screenWipe[i].style.display = "none";
+        }
+
+        for (var k=0; k<containerWipe.length; k++){
+            containerWipe[k].style.display = "none";
         }
         options.style.display = "contents";
     }
@@ -80,10 +124,16 @@
     function burgerReset(){
         var options = document.getElementById("menu");
         var screenWipe = document.getElementsByTagName("header");
+        var containerWipe = document.getElementsByClassName('container');
         var footerWipe = document.getElementById("footer");
+        
         for (var i=0; i<screenWipe.length; i++){
             screenWipe[i].style.display = "";
         }
+        for (var k=0; k<containerWipe.length; k++){
+            containerWipe[k].style.display = "";
+        }
+
         footerWipe.style.display = "";
         options.style.display = "none";
 

@@ -52,16 +52,18 @@ button:hover{
     background-color: #A3B18A;
 }
 
-.logo {
+#NavBar.logo {
     background-color: #344E41;
-    font-size: 2rem;
     margin-right: -5rem;
 }
 
-.logo:hover{
+#NavBar .logo:hover{
     background-color: #344E41;
 }
 
+.logo button{
+    font-size: 2.5rem;
+}
 /* Hamburger Optional Container W/ Switch */
 
 #NavBar{
@@ -82,6 +84,11 @@ button:hover{
 
 #NavBar .logo{
     margin-left: auto;
+    margin-right: -3rem;
+}
+
+.logo{
+    font-size: 2.25rem;
 }
 
 .hamburgerlines div{
@@ -166,20 +173,121 @@ button:hover{
     display: none;
 }
 
-@media screen and (max-width:860px){
+@media screen and (max-width:900px){
 
     #navbarbox{
         display: none;
     }
 
     .logo{
-        margin-right: -1rem;
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
     
     .checkbox{
         display: contents;
     }
 
+    #NavBar{
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 2rem;
+    }
 }
+
 /* Landing Container CSS */
+
+#landingContainer{
+    width: 100%;
+    height: 70rem;
+
+    display: flex;
+}
+
+.landingLeft{
+    width: 50%;
+    height: 45rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 2rem;
+}
+
+.profilePhoto img{
+    width: 500px;
+    height: 500px;
+}
+
+.socialLogos{
+    margin-top: 1rem;
+}
+
+.socialLogos a{
+    text-decoration: none;
+}
+
+.landingRight{
+    width: 50%;
+    height: 45rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+
+    margin-right: 2rem;
+}
+
+.introText{
+    max-width: 40rem;
+}
+
+.descText{
+    max-width: 40rem;
+    margin-top: 3rem;
+}
+
+.nextPage{
+    max-width: 40rem;
+    margin-top: 3rem;
+}
+
+
+@media screen and (max-width:900px){
+    #landingContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .landingRight{
+        margin-left:2rem;
+        margin-top: 1rem;
+
+        width:fit-content;
+    }
+
+    .landingRight div{
+        
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;
+
+    }
+
+    .landingLeft{
+        margin: 0;
+        width: fit-content;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profilePhoto img{
+        width: 400px;
+        height: 400px;
+    }
+    
+}
