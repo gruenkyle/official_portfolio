@@ -65,7 +65,6 @@ button:hover{
 /* Hamburger Optional Container W/ Switch */
 
 #NavBar{
-    width: 100%vh;
     height: 3.5rem;
     background-color: #344E41;
 
@@ -78,6 +77,7 @@ button:hover{
 
     top: 0; 
     transition: 0.4s;
+    position: sticky;
 }
 
 #NavBar .logo{
