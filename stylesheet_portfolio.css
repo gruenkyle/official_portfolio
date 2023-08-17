@@ -19,6 +19,10 @@ body{
     background-color: #344E41;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* NavBar Menu Container */
 
 #navbarbox{
@@ -42,6 +46,7 @@ button {
     color: whitesmoke;
 
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .open{
@@ -191,7 +196,6 @@ button:hover{
         justify-content: center;
         align-items: center;
 
-        margin-bottom: 2rem;
     }
 }
 
@@ -199,9 +203,11 @@ button:hover{
 
 #landingContainer{
     width: 100%;
-    height: 70rem;
+    height: 50rem;
 
     display: flex;
+
+    background-color: #496D5B;
 }
 
 .landingLeft{
@@ -228,13 +234,13 @@ button:hover{
     text-decoration: none;
 }
 
-.landingRight{
+.landingRight {
     width: 50%;
     height: 45rem;
 
     display: flex;
     justify-content: center;
-    align-items: left;
+    align-items: flex-start;
     flex-direction: column;
 
     margin-right: 2rem;
@@ -254,11 +260,18 @@ button:hover{
     margin-top: 3rem;
 }
 
+.nextPage:hover{
+    color: #A3B18A;
+    cursor: pointer;
+}
+
 
 @media screen and (max-width:900px){
     #landingContainer{
         flex-direction: column;
         align-items: center;
+
+        height: 65rem;
     }
 
     .landingRight{
@@ -290,4 +303,15 @@ button:hover{
         height: 400px;
     }
     
+}
+
+/* Programming Container */
+
+#programmingContainer{
+    width: 100%;
+    height: 70rem;
+
+    display: flex;
+
+    background-color: #588157;
 }

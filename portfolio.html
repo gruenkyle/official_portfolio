@@ -24,10 +24,10 @@
         </div>
         <div class="menuOptions">
             <ul>
-                <li onclick="menuClick('Home')"><a>Home</a></li>
-                <li onclick="menuClick('Programming')"><a>Programming</a></li>
-                <li onclick="menuClick('Photography')"><a>Photography</a></li>
-                <li onclick="menuClick('AboutMe')"><a>About Me</a></li>
+                <li onclick="menuClick('Home', 'landingContainer')"><a>Home</a></li>
+                <li onclick="menuClick('Programming', 'programmingContainer')"><a>Programming</a></li>
+                <li onclick="menuClick('Photography', 'photographyContainer')"><a>Photography</a></li>
+                <li onclick="menuClick('AboutMe', 'aboutMeContainer')"><a>About Me</a></li>
             </ul> 
         </div>
     </header>
@@ -42,11 +42,11 @@
         </div>
         <div id="navbarbox">
             <button class="tablink Home open" onclick="scrollPg('Home', 'landingContainer')">Home</button>
-            <button class="tablink Programming" onclick="scrollPg('Programming')">Programming</button>
-            <button class="tablink Photography" onclick="scrollPg('Photography')">Photography</button>
-            <button class="tablink AboutMe" onclick="scrollPg('AboutMe')">About Me</button>
+            <button class="tablink Programming" onclick="scrollPg('Programming', 'programmingContainer')">Programming</button>
+            <button class="tablink Photography" onclick="scrollPg('Photography', 'photographyContainer')">Photography</button>
+            <button class="tablink AboutMe" onclick="scrollPg('AboutMe', 'aboutMeContainer')">About Me</button>
         </div>
-        <button class="tablink Home logo" onclick="scrollPg('Home')">Kyle Gruen</button>
+        <button class="tablink Home logo" onclick="scrollPg('Home', 'landingContainer')">Kyle Gruen</button>
     </header>
 
     <div id="landingContainer" class="container">
@@ -83,9 +83,12 @@
                 </h3>
             </div>
             <div class="nextPage">
-                <h2 onclick="scrollPg('Home')">Explore More Below &nbsp; &#8711;</h2>
+                <h2 onclick="scrollPg('Programming', 'programmingContainer')">Explore More Below &nbsp; &#8711;</h2>
             </div>  
         </div>
+    </div>
+    <div id="programmingContainer" class="container">
+
     </div>
 
 </body>
@@ -139,9 +142,9 @@
 
     }
 
-    function menuClick(location){
+    function menuClick(location, idLoc){
         burgerReset();
-        scrollPg(location);
+        scrollPg(location, idLoc);
     }
 
 
