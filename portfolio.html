@@ -18,13 +18,36 @@
 </head>
 <body>
 
-    <div id="navbarbox">
-        <button class="tablink Home open" onclick="scrollPg('Home')">Home</button>
-        <button class="tablink Programming" onclick="scrollPg('Programming')">Programming</button>
-        <button class="tablink Photography" onclick="scrollPg('Photography')">Photography</button>
-        <button class="tablink AboutMe" onclick="scrollPg('AboutMe')">About Me</button>
-        <button class="logo" onclick="scrollPg('Home')">Kyle Gruen</button>
-    </div>
+    <header id="phoneMenu">
+        <div class="exitMenu">
+            <h1 onclick="burgerReset()">X</h1>
+        </div>
+        <div class="menuOptions">
+            <ul>
+                <li onclick="menuClick('Home')"><a>Home</a></li>
+                <li onclick="menuClick('Programming')"><a>Programming</a></li>
+                <li onclick="menuClick('Photography')"><a>Photography</a></li>
+                <li onclick="menuClick('AboutMe')"><a>About Me</a></li>
+            </ul> 
+        </div>
+    </header>
+
+    <header id="NavBar">
+        <div class="checkbox" onclick="burgerMenu()">
+            <div class="hamburgerlines">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+        <div id="navbarbox">
+            <button class="tablink Home open" onclick="scrollPg('Home')">Home</button>
+            <button class="tablink Programming" onclick="scrollPg('Programming')">Programming</button>
+            <button class="tablink Photography" onclick="scrollPg('Photography')">Photography</button>
+            <button class="tablink AboutMe" onclick="scrollPg('AboutMe')">About Me</button>
+        </div>
+        <button class="tablink Home logo" onclick="scrollPg('Home')">Kyle Gruen</button>
+    </header>
 
 </body>
 
@@ -38,8 +61,40 @@
             tabs[i].classList.remove("open");
         }
         curr[0].classList.add("open");
+
+        var elem = document.getElementById(location);
+        elem.scrollIntoView();
+    }
+
+    function burgerMenu(){
+        var options = document.getElementById('phoneMenu');
+        var screenWipe = document.getElementsByTagName('header');
+        var footerWipe = document.getElementById('footer');
+
+        for (var i=0; i<screenWipe.length; i++){
+            screenWipe[i].style.display = "none";
         }
-        
+        options.style.display = "contents";
+    }
+
+    function burgerReset(){
+        var options = document.getElementById("menu");
+        var screenWipe = document.getElementsByTagName("header");
+        var footerWipe = document.getElementById("footer");
+        for (var i=0; i<screenWipe.length; i++){
+            screenWipe[i].style.display = "";
+        }
+        footerWipe.style.display = "";
+        options.style.display = "none";
+
+    }
+
+    function menuClick(location){
+        burgerReset();
+        scrollPg(location);
+    }
+
+
 </script>
 
 </html>
