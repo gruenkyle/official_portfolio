@@ -10,6 +10,25 @@
 
     <div id="landingContainer">
         <div class="landingLeft">
+            <div class="profilePhoto">
+                <img src="../img/portfolioLogo.png" alt="ProfileIMG">
+            </div>
+            <div class="socialLogos">
+                <a href="https://github.com/gruenkyle">
+                    <img src="../img/icons8-github.svg" alt="githubIcon"
+                    style="width: 70px; height:70px;">
+                </a>
+                <a href="https://www.linkedin.com/in/kylegruen/">
+                    <img src="../img/icons8-linkedin.svg" alt="linkedInIcon"
+                    style="width: 70px; height:70px;">
+                </a>
+                <a href="https://www.instagram.com/kale__photography">
+                    <img src="../img/icons8-instagram.svg" alt="instagramIcon"
+                    style="width: 70px; height:70px;">
+                </a>
+            </div>
+        </div>
+        <div class="landingRight">
             <div class="introText">
                 <h1>Capturing Special Moments and 
                     Programming Complex Solutions Everyday
@@ -21,9 +40,10 @@
                     This is my portfolio where art and technology combine
                     to create innovative works!
                 </h3>
-            </div>   
-        </div>
-        <div class="landingRight">
+            </div>
+            <div class="nextPage">
+                <h2 onclick="scrollPg('Home')">Explore More Below &nbsp; &#8711;</h2>
+            </div>  
         </div>
     </div>
 
@@ -48,7 +68,7 @@
         font-family: "Noto Sans Thai", sans-serif;
         font-weight: 300;
         font-size: 1rem; 
-        color: black; 
+        color: whitesmoke; 
         min-height: 100%;
         background-color: #5e9c7d;
     }
@@ -68,6 +88,7 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-left: 2rem;
     }
 
     .introText{
@@ -79,9 +100,55 @@
         margin-top: 3rem;
     }
 
+    .nextPage{
+        max-width: 40rem;
+        margin-top: 3rem;
+    }
+
     .landingRight{
         width: 50%;
         height: 45rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: left;
+        flex-direction: column;
+
+        margin-right: 2rem;
+    }
+
+    .profilePhoto img{
+        width: 500px;
+        height: 500px;
+    }
+
+    .socialLogos{
+        margin-top: 1rem;
+    }
+
+    .socialLogos a{
+        text-decoration: none;
+    }
+
+    @media screen and (max-width:900px){
+        #landingContainer{
+            flex-direction: column;
+        }
+
+        .landingRight{
+            margin-left:2rem;
+            margin-top: 4rem;
+
+            width:fit-content;
+        }
+
+        .landingLeft{
+            margin: 0;
+            width: fit-content;
+
+            justify-content: center;
+            align-items: center;
+        }
     }
 
 </style>
