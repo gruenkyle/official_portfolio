@@ -210,6 +210,7 @@ button:hover{
     background-color: #496D5B;
 }
 
+
 .landingLeft{
     width: 50%;
     height: 45rem;
@@ -219,6 +220,8 @@ button:hover{
     align-items: center;
     flex-direction: column;
     margin-left: 2rem;
+
+    animation: fadeIn 3s;
 }
 
 .profilePhoto img{
@@ -276,7 +279,7 @@ button:hover{
 
     .landingRight{
         margin-left:2rem;
-        margin-top: 1rem;
+        margin-top: -5rem;
 
         width:fit-content;
     }
