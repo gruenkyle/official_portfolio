@@ -7,14 +7,33 @@
 </head>
 
 <body>
-
+    
+    <div class="titleCard">
+        <h1>Programming</h1>
+    </div>
     <div id="programmingContainer" class="container">
-        <div class="titleCard">
-            <h1>Programming</h1>
+        <div class="firstProj project">
+            <div class="projLeft tiles">
+                <img src="../img/icons8-github.svg">
+                <h3>ProjectTitle</h3>
+            </div>
+            <div class="projRight tiles">
+                <p>This is an example text of where itll go</p>
+                <div class="choiceOne progButton">
+                    <button>View Code</button>
+                </div>
+            </div>
         </div>
-        <div class="cardDeck">
-            <div class="coverCard">
-                
+        <div class="secondProj project">
+            <div class="projRight tiles">
+                <p>This is an example text of where itll go</p>
+                <div class="choiceOne progButton">
+                    <button>View Code</button>
+                </div>
+            </div>
+            <div class="projLeft tiles">
+                <img src="../img/icons8-instagram.svg">
+                <h3>ProjectTitle</h3>
             </div>
         </div>
     </div>
@@ -28,16 +47,21 @@
         box-sizing: border-box;
         margin: 0; 
         padding: 0; 
-        border: 0px solid #ff0000; 
+        border: 1px solid #ff0000; 
     }
 
     body{
         margin: 0;
         font-family: "Noto Sans Thai", sans-serif;
         font-weight: 300;
-        font-size: 1rem; 
+        font-size: 1.5rem; 
         color: whitesmoke; 
         min-height: 100%;
+
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
         background-color: #6B9D84;
     }
@@ -45,6 +69,51 @@
     html{
         scroll-behavior: smooth;
     }
+
+    #programmingContainer{
+        margin-top: 3rem;
+        width: 80%; 
+    }
+
+    .project{
+        display:flex;
+        flex-direction: row;
+
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+
+        gap: 1rem;
+
+        height: 15rem;
+
+    }
+
+    .tiles{
+        background-color: #517a66;
+    }
+
+    .projLeft{
+        width: 50%;
+        min-height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .projRight{
+        width: 50%;
+        min-height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+
     
 </style>
 
