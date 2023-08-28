@@ -5,7 +5,7 @@
     box-sizing: border-box;
     margin: 0; 
     padding: 0; 
-    border: 0px solid #ff0000; 
+    border: 1px solid #ff0000; 
 }
 
 body{
@@ -315,6 +315,75 @@ button:hover{
     height: 70rem;
 
     display: flex;
+    align-items: center;
+    flex-direction: column;
 
     background-color: #6B9D84;
 }
+
+#progProjContainer{
+    margin-top: 2rem;
+    width: 80%; 
+}
+
+.project{
+    display:flex;
+    flex-direction: row;
+
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+
+    gap: 1rem;
+
+    height: 15rem;
+
+    animation: fadeIn 3s; 
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.tiles{
+    background-color: #517a66;
+}
+
+.projLeft{
+    width: 50%;
+    min-height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projRight{
+    width: 50%;
+    min-height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progButton{
+    margin-top: 1rem;
+}
+
+.projTitle{
+    margin-top: -2rem;
+}
+
+.titleCard h1{
+    margin-top: 4rem;
+    font-size: 3rem;
+}
+
+.t1{
+    background: url('./img/portfolioProjPic.png') no-repeat;
+    background-size: 100%;
+}
+
