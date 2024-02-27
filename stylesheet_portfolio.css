@@ -384,6 +384,9 @@ button:hover{
 
 .t1{
     background: url('./img/portfolioProjPic.png') no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    display:block;
 }
 
+@media screen and (max-width:900px){
+}

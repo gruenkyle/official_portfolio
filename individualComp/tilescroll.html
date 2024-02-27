@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+</head>
+
+<body>
+    <figure class="tile">
+        <img src="../img/portfolioProjPic.png" class="card_image">
+        <figcaption class="card_body">
+            <h2 class="card_title">Portfolio Project</h2>
+            <p class="card_description">Currently the website you are on,
+                this is a fully responsive HTML, CSS, and Javascript Project
+            </p>
+            <a href="https://github.com/gruenkyle/personal_portfolio">
+                <button class="card_button">View Code</button></a>
+        </figcaption>
+    </figure>
+
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300&display=swap');
+
+    *{
+        box-sizing: border-box;
+        margin: 0; 
+        padding: 0; 
+        border: 1px solid #ff0000; 
+    }
+
+    body{
+        margin: 0;
+        font-family: "Noto Sans Thai", sans-serif;
+        font-weight: 300;
+        font-size: 1.5rem; 
+        color: whitesmoke; 
+        min-height: 100%;
+
+        background-color: #6B9D84;
+    }
+
+    .tile {
+        position: relative;
+        width: 600px;
+        height: 300px;
+        overflow: hidden;
+
+        background-color: black;
+    }
+
+    .card_image{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: opacity 0.25s, scale 0.35s;
+    }
+
+    .tile:hover .card_image{
+        opacity: 0.25;
+        scale: 1;
+    }
+
+    .card_body{
+        position: absolute; 
+        inset: 0;
+        padding: 50px;
+        color: #fff; 
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+        justify-content: center;
+
+        object-fit: contain;
+    }
+
+    .card_body::before{
+        content: ''; 
+        position: absolute;
+        inset: 3rem; 
+        border: 2px solid #fff;
+        opacity: 0;
+        scale: 1.25;
+        transition: opacity 0.25s, scale 0.25s;
+    }
+
+    .tile:hover .card_body::before{
+        opacity: 1;
+        scale: 1;
+    }
+
+    .card_title{
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 10px rgba(0,0,0, .5);
+
+        margin-top: 9rem;
+        background-color: #6B9D84;
+    }
+
+    .card_description{
+        font-size: 1.5rem;
+        opacity: 0;
+        translate: -25px;
+        transition: translate 0.25s;
+    }
+
+    .card_button{
+        opacity: 0;
+        translate: -25px;
+        transition: opacity 0.25s, translate 0.25s;
+
+        padding-right: 1rem;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        background-color: #6B9D84;
+        color: whitesmoke;
+    }
+
+
+    .tile:hover .card_description{
+        opacity: 1;
+        translate: 0;
+    }
+
+    .tile:hover .card_button{
+        opacity: 1;
+        translate: 0;
+
+    }
+
+    .tile:hover .card_title{
+        display: none;
+    }
+
+    @media screen and (max-width: 900px) {
+        .tile{
+            width: 400px;
+            height: 200px;
+        }
+    }
+
+
+
+</style>
+
+<script>
+
+</script>
+
+</html>
